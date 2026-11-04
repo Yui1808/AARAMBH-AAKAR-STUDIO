@@ -1,0 +1,152 @@
+.philosophy {
+  padding: 8rem 2rem;
+  background: linear-gradient(180deg, #0D0D0D 0%, #0A0A07 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy::before {
+  content: 'DESIGN';
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12rem;
+  font-weight: 300;
+  color: rgba(201,169,110,0.03);
+  letter-spacing: 0.3em;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.philosophy-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.phil-header {
+  margin-bottom: 5rem;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.phil-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.phil-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--stone-light);
+  margin-top: 1.5rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.principle-card {
+  position: relative;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(201,169,110,0.1);
+  padding: 2rem 1.6rem;
+  overflow: hidden;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.7s ease, transform 0.7s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.principle-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.principle-card.hovered {
+  background: rgba(255,255,255,0.055);
+  border-color: rgba(201,169,110,0.3);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.card-canvas-wrapper {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.card-icon-static {
+  font-size: 2.5rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.principle-card:hover .card-icon-static {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.principle-content {
+  position: relative;
+  z-index: 1;
+}
+
+.principle-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.principle-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.principle-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--stone-light);
+}
+
+.principle-accent {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.principle-card.hovered .principle-accent {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .principles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
