@@ -16,9 +16,11 @@ const Footer = () => {
           {[
             { label: 'About', id: 'about' },
             { label: 'Philosophy', id: 'philosophy' },
+            { label: 'Services', id: 'services' },
             { label: 'Process', id: 'process' },
+            { label: 'Team', id: 'team' },
             { label: 'Contact', id: 'contact' },
-          ].map(l => (
+          ].map((l) => (
             <button
               key={l.label}
               className="f-link"
@@ -33,22 +35,25 @@ const Footer = () => {
       <div className="footer-mid">
         <div className="f-philosophy">
           <span className="f-label">Design Philosophy</span>
-          <p>Contextual · Functional · Sustainable · Innovative · Human-Centric</p>
+          <p>Contextual &bull; Functional &bull; Sustainable &bull; Innovative &bull; Human-Centric</p>
         </div>
         <div className="f-philosophy">
-          <span className="f-label">Studio Name Meaning</span>
-          <p>Aarambh — The Beginning &nbsp;·&nbsp; Aakar — The Form &nbsp;·&nbsp; Studio — The Space</p>
+          <span className="f-label">Studio Locations &amp; Direct Line</span>
+          <p>Sector - 63 Noida &bull; Albatiya Agra &nbsp;|&nbsp; Direct: 9205343489 &bull; E-mail: xyz@aarambhaakar.com</p>
+        </div>
+        <div className="f-philosophy">
+          <span className="f-label">Founders &amp; Leadership</span>
+          <p>AR. Mohit Babu (CEO &amp; Founder) &bull; ER. Abhishek Singh (Civil Expertise - 8 Yrs)</p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span className="f-copy">© {year} Aarambh Aakar Studio. All rights reserved.</span>
+        <span className="f-copy">&copy; {year} Aarambh Aakar Studio. All rights reserved.</span>
         <div className="f-divider" />
-        <span className="f-made">Crafted with purpose &amp; passion.</span>
+        <span className="f-made">Where Ideas Begin, and Spaces Take Shape.</span>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-

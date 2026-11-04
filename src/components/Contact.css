@@ -1,0 +1,452 @@
+.contact {
+  padding: 8.5rem 2rem 7rem;
+  background: radial-gradient(ellipse at 80% 20%, #171308 0%, #0D0D0D 60%, #070707 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-watermark {
+  position: absolute;
+  top: 15%;
+  right: -5%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16rem;
+  font-weight: 300;
+  color: rgba(201, 169, 110, 0.02);
+  letter-spacing: 0.2em;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.contact-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-inner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-header {
+  max-width: 720px;
+  margin-bottom: 4rem;
+}
+
+.contact-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--stone-light);
+  margin-top: 1.2rem;
+}
+
+/* ── Grid Layout ────────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* ── Studios Pair Card (Noida & Agra) ───────────────────────── */
+.studios-pair-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(201, 169, 110, 0.18);
+  border-radius: 6px;
+  padding: 2.2rem 2.2rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-top-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+.studio-location-block {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.loc-pin {
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+
+.loc-info {
+  flex: 1;
+}
+
+.loc-city {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.loc-address {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+
+.loc-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--stone-light);
+}
+
+.loc-separator {
+  height: 1px;
+  background: rgba(201, 169, 110, 0.12);
+  margin: 1.5rem 0;
+}
+
+/* ── Direct Phone & WhatsApp ────────────────────────────────── */
+.direct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.interactive-chip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.interactive-chip:hover {
+  background: rgba(201, 169, 110, 0.08);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.whatsapp-chip:hover {
+  border-color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+.chip-icon {
+  font-size: 1.4rem;
+}
+
+.chip-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 0.2rem;
+}
+
+.chip-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.whatsapp-chip .chip-value {
+  color: #8AE6A2;
+}
+
+/* ── Email & Team Line Card ─────────────────────────────────── */
+.info-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(201, 169, 110, 0.12);
+  border-radius: 4px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.info-body {
+  flex: 1;
+}
+
+.info-tag {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.email-display {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--stone-light);
+}
+
+.email-display strong {
+  color: var(--gold);
+}
+
+.copy-btn {
+  background: rgba(201, 169, 110, 0.12);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  color: var(--gold-light);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.leadership-quick-line {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--stone);
+  border-top: 1px solid rgba(201, 169, 110, 0.08);
+  padding-top: 0.8rem;
+  line-height: 1.6;
+}
+
+.leadership-quick-line strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* ── Form Card ──────────────────────────────────────────────── */
+.form-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  padding: 2.8rem 2.4rem;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.form-top {
+  margin-bottom: 1.8rem;
+}
+
+.form-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.form-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--stone-light);
+  line-height: 1.7;
+}
+
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone-light);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(13, 13, 13, 0.8);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: 3px;
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  padding: 0.8rem 1rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 0 10px rgba(201, 169, 110, 0.2);
+}
+
+.form-group select option {
+  background: #111;
+  color: #fff;
+}
+
+.form-submit-btn {
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.form-submit-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35);
+}
+
+.form-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: var(--stone);
+  margin-top: 0.4rem;
+  justify-content: center;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7A9E7E;
+}
+
+/* ── Success Animation Card ─────────────────────────────────── */
+.submit-success {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 2.8rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.submit-success h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--cream);
+  margin-bottom: 0.8rem;
+}
+
+.submit-success p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: var(--stone-light);
+  line-height: 1.8;
+}
+
+@media (max-width: 950px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .direct-grid,
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .form-card {
+    padding: 2rem 1.4rem;
+  }
+}

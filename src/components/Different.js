@@ -70,7 +70,7 @@ const Different = () => {
   const inView = useInView(ref, { threshold: 0.15 });
 
   return (
-    <section className="different" id="contact" ref={ref}>
+    <section className="different" id="different" ref={ref}>
       <div className="different-bg-text">AAKAR</div>
 
       <div className="different-inner">
