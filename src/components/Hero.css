@@ -67,29 +67,32 @@
 .hero-title {
   display: flex;
   flex-direction: column;
-  line-height: 0.94;
+  line-height: 0.98;
   animation: fadeUp 1s ease 0.4s both;
 }
 
 .title-word {
   display: block;
-  font-family: 'Blackpool Gothic', 'BlackpoolGothic', sans-serif !important;
-  font-size: clamp(3.4rem, 9vw, 8.2rem);
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
+  font-family: 'Blackpool Gothic', sans-serif !important;
+  font-size: clamp(3rem, 8.5vw, 7.8rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .title-gold {
   color: var(--gold);
+  font-weight: 500;
 }
 
 .title-light {
   color: var(--cream);
+  font-weight: 400;
 }
 
 .title-thin {
   color: var(--stone-light);
-  font-size: clamp(1.3rem, 3vw, 2.4rem);
+  font-weight: 300;
+  font-size: clamp(1.2rem, 2.6vw, 2.2rem);
   letter-spacing: 0.45em;
   margin-top: 0.5rem;
 }
