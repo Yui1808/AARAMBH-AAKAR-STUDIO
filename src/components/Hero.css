@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Blackpool Gothic';
+  src: url('../fonts/BlackpoolGothic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -67,15 +75,15 @@
 .hero-title {
   display: flex;
   flex-direction: column;
-  line-height: 1.02;
+  line-height: 0.98;
   animation: fadeUp 1s ease 0.4s both;
 }
 
 .title-word {
   display: block;
-  font-family: 'Unbounded', sans-serif;
-  font-size: clamp(2.6rem, 7.2vw, 6.2rem);
-  letter-spacing: 0.06em;
+  font-family: 'Blackpool Gothic', 'Unbounded', sans-serif;
+  font-size: clamp(3rem, 8.5vw, 7.8rem);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -92,7 +100,7 @@
 .title-thin {
   color: var(--stone-light);
   font-weight: 300;
-  font-size: clamp(1.1rem, 2.4vw, 2rem);
+  font-size: clamp(1.2rem, 2.6vw, 2.2rem);
   letter-spacing: 0.45em;
   margin-top: 0.5rem;
 }
