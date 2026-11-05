@@ -73,15 +73,16 @@
 
 .title-word {
   display: block;
-  font-family: 'Blackpool Gothic', sans-serif !important;
+  font-family: 'BlackpoolGothic', 'Blackpool Gothic', sans-serif !important;
   font-size: clamp(3rem, 8.5vw, 7.8rem);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
+  font-weight: 400;
 }
 
 .title-gold {
   color: var(--gold);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .title-light {
@@ -91,7 +92,7 @@
 
 .title-thin {
   color: var(--stone-light);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.2rem, 2.6vw, 2.2rem);
   letter-spacing: 0.45em;
   margin-top: 0.5rem;
