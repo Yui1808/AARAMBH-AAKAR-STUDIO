@@ -82,11 +82,15 @@
 
 .title-gold {
   color: var(--gold);
+  font-size: clamp(3.35rem, 9.6vw, 8.8rem);
+  letter-spacing: 0.08em;
   font-weight: 400;
 }
 
 .title-light {
   color: var(--cream);
+  font-size: clamp(2.9rem, 8.2vw, 7.5rem);
+  letter-spacing: 0.09em;
   font-weight: 400;
 }
 
