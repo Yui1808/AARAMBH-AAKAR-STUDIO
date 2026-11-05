@@ -15,6 +15,7 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [waLink, setWaLink] = useState('');
 
   const copyEmail = () => {
     navigator.clipboard.writeText('xyz@aarambhaakar.com');
@@ -24,12 +25,27 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.contact) return;
+    if (!formData.name.trim() || !formData.contact.trim()) return;
+
+    const messageText = 
+`*NEW PROJECT INQUIRY - AARAMBH AAKAR STUDIO*
+
+👤 *Client Name:* ${formData.name.trim()}
+📞 *Phone / Contact:* ${formData.contact.trim()}
+🏛️ *Service Required:* ${formData.service}
+📍 *Preferred Studio:* ${formData.location}
+📝 *Project Scope / Message:* ${formData.message.trim() ? formData.message.trim() : 'Not specified'}
+
+_Sent via Aarambh Aakar Studio Website_`;
+
+    const encoded = encodeURIComponent(messageText);
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=919205343489&text=${encoded}`;
+
+    setWaLink(whatsappUrl);
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', contact: '', service: 'Residential', location: 'Noida', message: '' });
-    }, 4500);
+
+    // Open WhatsApp in a new tab immediately
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -140,12 +156,38 @@ const Contact = () => {
 
               {submitted ? (
                 <div className="submit-success">
-                  <div className="success-icon">✦</div>
-                  <h4>Vision Received</h4>
+                  <div className="success-icon">💬</div>
+                  <h4>Connecting to WhatsApp...</h4>
                   <p>
-                    Thank you, <strong>{formData.name}</strong>. The beginning of an idea is in motion.
-                    AR. Mohit Babu &amp; ER. Abhishek Singh's team will connect with you shortly.
+                    Thank you, <strong>{formData.name}</strong>! Your inquiry details are pre-filled and sent to our official WhatsApp (<strong>9205343489</strong>).
                   </p>
+                  
+                  <div className="wa-redirect-box">
+                    <a
+                      href={waLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-open-wa"
+                    >
+                      <span>Open WhatsApp Chat Directly</span>
+                      <span className="wa-icon-arr">↗</span>
+                    </a>
+                  </div>
+
+                  <p className="wa-help-note">
+                    If WhatsApp didn't open automatically, click the green button above to deliver your message.
+                  </p>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({ name: '', contact: '', service: 'Residential', location: 'Noida', message: '' });
+                    }}
+                    className="btn-reset-form"
+                  >
+                    ← Send Another Inquiry
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="inquiry-form">
@@ -219,13 +261,13 @@ const Contact = () => {
                   </div>
 
                   <button type="submit" className="form-submit-btn">
-                    <span>Submit Inquiry</span>
-                    <span className="btn-arrow">→</span>
+                    <span>Send Inquiry to WhatsApp (9205343489)</span>
+                    <span className="btn-arrow">💬 →</span>
                   </button>
 
                   <div className="form-meta">
                     <span className="live-dot" />
-                    <span>Active Inquiries &bull; Direct Studio Contact: 9205343489</span>
+                    <span>Instant WhatsApp Delivery &bull; 9205343489</span>
                   </div>
                 </form>
               )}
@@ -238,3 +280,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
