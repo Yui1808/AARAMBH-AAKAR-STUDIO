@@ -198,9 +198,9 @@ const Hero = () => {
         </div>
 
         <h1 className="hero-title">
-          <span className="title-word title-gold" style={{ fontFamily: "'BlackpoolGothic', 'Blackpool Gothic', sans-serif", textTransform: 'uppercase', fontWeight: 400 }}>AARAMBH</span>
-          <span className="title-word title-light" style={{ fontFamily: "'BlackpoolGothic', 'Blackpool Gothic', sans-serif", textTransform: 'uppercase', fontWeight: 400 }}>AAKAR</span>
-          <span className="title-word title-thin" style={{ fontFamily: "'BlackpoolGothic', 'Blackpool Gothic', sans-serif", textTransform: 'uppercase', fontWeight: 400 }}>STUDIO</span>
+          <span className="title-word title-gold" style={{ fontFamily: "'Blackpool Gothic NBP', 'Blackpool Gothic', 'BlackpoolGothic', sans-serif", textTransform: 'uppercase', fontWeight: 400 }}>AARAMBH</span>
+          <span className="title-word title-light" style={{ fontFamily: "'Blackpool Gothic NBP', 'Blackpool Gothic', 'BlackpoolGothic', sans-serif", textTransform: 'uppercase', fontWeight: 400 }}>AAKAR</span>
+          <span className="title-word title-thin" style={{ fontFamily: "'Blackpool Gothic NBP', 'Blackpool Gothic', 'BlackpoolGothic', sans-serif", textTransform: 'uppercase', fontWeight: 400 }}>STUDIO</span>
         </h1>
 
         <p className="hero-tagline">

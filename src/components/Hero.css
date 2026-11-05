@@ -73,7 +73,7 @@
 
 .title-word {
   display: block;
-  font-family: 'BlackpoolGothic', 'Blackpool Gothic', sans-serif !important;
+  font-family: 'Blackpool Gothic NBP', 'Blackpool Gothic', 'BlackpoolGothic', sans-serif !important;
   font-size: clamp(3rem, 8.5vw, 7.8rem);
   letter-spacing: 0.08em;
   text-transform: uppercase !important;
